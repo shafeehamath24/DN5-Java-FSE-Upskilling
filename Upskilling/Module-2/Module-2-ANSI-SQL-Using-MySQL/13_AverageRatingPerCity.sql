@@ -1,0 +1,18 @@
+/* 13. Average Rating per City
+   Calculate average feedback rating
+   of events conducted in each city. */
+
+USE event_management;
+
+SELECT
+
+    e.city,
+    ROUND(AVG(f.rating), 2)
+    AS average_rating
+
+FROM Events e
+
+JOIN Feedback f
+    ON e.event_id = f.event_id
+
+GROUP BY e.city;
