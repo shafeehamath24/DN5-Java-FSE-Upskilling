@@ -1,0 +1,21 @@
+/* 16. Unregistered Active Users
+   Find users created in the last
+   30 days without registrations. */
+
+USE event_management;
+
+SELECT
+
+    u.user_id,
+    u.full_name,
+    u.email
+
+FROM Users u
+
+LEFT JOIN Registrations r
+    ON u.user_id = r.user_id
+
+WHERE u.registration_date >=
+CURDATE() - INTERVAL 30 DAY
+
+AND r.registration_id IS NULL;
