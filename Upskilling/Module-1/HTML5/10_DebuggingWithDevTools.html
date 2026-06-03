@@ -1,0 +1,67 @@
+<!--
+10. Debugging with Chrome DevTools
+
+Scenario:
+Users report layout
+and script issues.
+
+Objective:
+Use DevTools and
+VS Code debugging.
+
+Task:
+• Use console logs
+
+• Add breakpoints
+
+• Inspect styles
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Debugging Example</title>
+
+    <script>
+
+        let number = 10;
+
+        console.log(
+            "Number value is :",
+            number
+        );
+
+        function test(){
+
+            let result = number * 5;
+
+            console.log(
+                "Result :",
+                result
+            );
+
+            debugger;
+
+            alert(result);
+
+        }
+
+    </script>
+
+</head>
+
+<body>
+
+<button onclick="test()">
+
+    Click Here
+
+</button>
+
+</body>
+
+</html>

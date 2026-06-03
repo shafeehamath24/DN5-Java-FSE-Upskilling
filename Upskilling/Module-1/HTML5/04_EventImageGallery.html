@@ -1,0 +1,119 @@
+<!--
+4. Image Gallery for Community Events
+
+Scenario:
+Show images from past events
+in a table layout.
+
+Objective:
+Work with images, tables,
+and formatting tags.
+
+Task:
+• Create table with images
+
+• Add alt and title
+
+• Apply border styling
+
+• Add captions
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Image Gallery</title>
+
+    <style>
+        .eventImg {
+
+            border: 3px solid black;
+            width: 200px;
+            height: 150px;
+
+        }
+
+        table {
+
+            border-collapse: collapse;
+
+        }
+
+        td {
+
+            padding: 10px;
+
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <table border="1">
+
+        <tr>
+
+            <td>
+
+                <img src="event1.jpg" alt="Music Event" title="Music Event" class="eventImg">
+
+                <p>Music Festival</p>
+
+            </td>
+
+            <td>
+
+                <img src="event2.jpg" alt="Food Event" title="Food Event" class="eventImg">
+
+                <p>Food Carnival</p>
+
+            </td>
+
+            <td>
+
+                <img src="event3.jpg" alt="Sports Event" title="Sports Event" class="eventImg">
+
+                <p>Sports Day</p>
+
+            </td>
+
+        </tr>
+
+        <tr>
+
+            <td>
+
+                <img src="event4.jpg" alt="Dance Event" title="Dance Event" class="eventImg">
+
+                <p>Dance Show</p>
+
+            </td>
+
+            <td>
+
+                <img src="event5.jpg" alt="Book Fair" title="Book Fair" class="eventImg">
+
+                <p>Book Fair</p>
+
+            </td>
+
+            <td>
+
+                <img src="event6.jpg" alt="Art Event" title="Art Event" class="eventImg">
+
+                <p>Art Exhibition</p>
+
+            </td>
+
+        </tr>
+
+    </table>
+
+</body>
+
+</html>

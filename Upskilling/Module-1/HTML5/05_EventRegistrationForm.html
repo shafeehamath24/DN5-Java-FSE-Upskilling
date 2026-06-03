@@ -1,0 +1,104 @@
+<!--
+5. Event Registration Form
+
+Scenario:
+Residents need to register
+for events.
+
+Objective:
+Practice input types,
+validation, placeholder,
+autofocus, and output.
+
+Task:
+• Add registration fields
+
+• Use placeholder and required
+
+• Display confirmation message
+
+• Style the form using CSS
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Registration Form</title>
+
+    <style>
+        form {
+
+            width: 400px;
+            padding: 20px;
+            border: 2px solid gray;
+            background-color: lightblue;
+
+        }
+
+        input,
+        select,
+        textarea {
+
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 8px;
+
+        }
+    </style>
+
+    <script>
+
+        function showMessage() {
+
+            document.getElementById("result").value =
+
+                "Registration Submitted Successfully";
+
+        }
+
+    </script>
+
+</head>
+
+<body>
+
+    <form onsubmit="showMessage();
+                return false;">
+
+        <input type="text" placeholder="Enter Name" required autofocus>
+
+        <input type="email" placeholder="Enter Email" required>
+
+        <input type="date" required>
+
+        <select required>
+
+            <option>Music</option>
+
+            <option>Sports</option>
+
+            <option>Food</option>
+
+        </select>
+
+        <textarea placeholder="Enter Message">
+
+    </textarea>
+
+        <button type="submit">
+
+            Register
+
+        </button>
+
+        <output id="result"></output>
+
+    </form>
+
+</body>
+
+</html>

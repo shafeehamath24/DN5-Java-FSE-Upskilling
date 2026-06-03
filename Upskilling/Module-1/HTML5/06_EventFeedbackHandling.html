@@ -1,0 +1,131 @@
+<!--
+6. Event Feedback with Events Handling
+
+Scenario:
+Collect real-time feedback
+and interactions from users.
+
+Objective:
+Handle blur, change,
+click, double-click,
+and keyboard events.
+
+Task:
+• Validate phone number
+
+• Display event fee
+
+• Show confirmation message
+
+• Enlarge image on double click
+
+• Count textarea characters
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Feedback Events</title>
+
+    <script>
+
+        function validatePhone() {
+
+            let phone =
+                document.getElementById("phone").value;
+
+            if (phone.length != 10) {
+
+                alert("Invalid Phone Number");
+
+            }
+        }
+
+        function showFee() {
+
+            let fee =
+                document.getElementById("event").value;
+
+            document.getElementById("fee").innerHTML =
+
+                "Event Fee : " + fee;
+
+        }
+
+        function submitMsg() {
+
+            alert("Feedback Submitted");
+
+        }
+
+        function enlarge(img) {
+
+            img.style.width = "400px";
+
+        }
+
+        function countChar() {
+
+            let text =
+                document.getElementById("feedback").value;
+
+            document.getElementById("count").innerHTML =
+
+                text.length;
+
+        }
+
+    </script>
+
+</head>
+
+<body>
+
+    Phone:
+
+    <input type="text" id="phone" onblur="validatePhone()">
+
+    <br><br>
+
+    Select Event:
+
+    <select id="event" onchange="showFee()">
+
+        <option value="100">Music</option>
+
+        <option value="200">Sports</option>
+
+        <option value="300">Dance</option>
+
+    </select>
+
+    <p id="fee"></p>
+
+    <img src="event.jpg" width="200" ondblclick="enlarge(this)">
+
+    <br><br>
+
+    <textarea id="feedback" onkeyup="countChar()">
+
+</textarea>
+
+    <p>
+
+        Characters :
+        <span id="count">0</span>
+
+    </p>
+
+    <button onclick="submitMsg()">
+
+        Submit
+
+    </button>
+
+</body>
+
+</html>
