@@ -1,0 +1,71 @@
+<!--
+10. Responsive Web Design
+with Media Queries
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Responsive Media Queries</title>
+
+    <style>
+        .nav {
+
+            display: flex;
+            gap: 20px;
+
+        }
+
+        img {
+
+            width: 40vw;
+
+        }
+
+        @media screen and (max-width:768px) {
+
+            .nav {
+
+                flex-direction: column;
+
+            }
+
+            img {
+
+                width: 80vw;
+
+            }
+
+            body {
+
+                font-size: 14px;
+
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="nav">
+
+        <a href="#">Home</a>
+
+        <a href="#">Events</a>
+
+        <a href="#">Contact</a>
+
+    </div>
+
+    <br>
+
+    <img src="event.jpg" alt="event">
+
+</body>
+
+</html>
