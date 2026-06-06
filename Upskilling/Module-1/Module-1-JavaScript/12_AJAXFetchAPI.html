@@ -1,0 +1,142 @@
+<!--
+12. AJAX & Fetch API 
+Scenario: Send user registration to the server. 
+Objective: Simulate backend communication. 
+Task: 
+• Use fetch() to POST user data to a mock API 
+• Show success/failure message after submission 
+• Use setTimeout() to simulate a delayed response 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width,
+                   initial-scale=1.0">
+
+    <title>AJAX Fetch API</title>
+
+    <style>
+        body {
+
+            font-family: Arial;
+            padding: 20px;
+
+        }
+
+        button {
+
+            padding: 10px 20px;
+            background: green;
+            color: white;
+            border: none;
+
+        }
+
+        #message {
+
+            margin-top: 20px;
+            font-weight: bold;
+
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h1>
+
+        AJAX Registration
+
+    </h1>
+
+    <button onclick="submitData()">
+
+        Submit Registration
+
+    </button>
+
+    <p id="message"></p>
+
+    <script>
+
+        function submitData() {
+
+            document.getElementById(
+                "message"
+            ).innerHTML =
+
+                "Submitting registration...";
+
+            setTimeout(() => {
+
+                fetch(
+
+                    "https://jsonplaceholder.typicode.com/posts",
+
+                    {
+
+                        method: "POST",
+
+                        headers: {
+
+                            "Content-Type":
+                                "application/json"
+
+                        },
+
+                        body: JSON.stringify({
+
+                            username: "Shafee",
+                            event: "Music Festival"
+
+                        })
+
+                    }
+
+                )
+
+                    .then(response =>
+
+                        response.json()
+
+                    )
+
+                    .then(data => {
+
+                        document.getElementById(
+                            "message"
+                        ).innerHTML =
+
+                            "Registration Successful";
+
+                        console.log(data);
+
+                    })
+
+                    .catch(error => {
+
+                        document.getElementById(
+                            "message"
+                        ).innerHTML =
+
+                            "Registration Failed";
+
+                        console.log(error);
+
+                    });
+
+            }, 2000);
+
+        }
+
+    </script>
+
+</body>
+
+</html>

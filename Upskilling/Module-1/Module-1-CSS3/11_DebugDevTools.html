@@ -1,0 +1,129 @@
+<!--
+11. Debug and Test with Dev Tools and VS Code
+
+Scenario:
+Some users report layout breaking
+on smaller screens.
+
+Objective:
+Use DevTools to test styles and debug.
+
+Task:
+• Use Chrome’s device toolbar
+  to simulate different screen sizes
+
+• Inspect applied styles and test
+  different values live
+
+• Use the Network tab to check if
+  the external CSS is loaded
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width,
+                   initial-scale=1.0">
+
+    <title>Debug and Test</title>
+
+    <style>
+        body {
+
+            font-family: Arial;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+
+        }
+
+        .container {
+
+            display: flex;
+            gap: 20px;
+            padding: 20px;
+
+        }
+
+        .card {
+
+            flex: 1;
+            background: white;
+            padding: 20px;
+            border: 1px solid #ccc;
+
+        }
+
+        h1 {
+
+            text-align: center;
+            background-color: darkblue;
+            color: white;
+            padding: 20px;
+
+        }
+
+        @media screen and (max-width:768px) {
+
+            .container {
+
+                flex-direction: column;
+
+            }
+
+            body {
+
+                background-color: lightyellow;
+
+            }
+
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h1>
+
+        Community Event Portal
+
+    </h1>
+
+    <div class="container">
+
+        <div class="card">
+
+            Music Festival Event
+
+        </div>
+
+        <div class="card">
+
+            Food Carnival Event
+
+        </div>
+
+        <div class="card">
+
+            Sports Meetup Event
+
+        </div>
+
+    </div>
+
+    <script>
+
+        console.log(
+            "Debugging layout loaded successfully"
+        );
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,89 @@
+<!--
+4. Functions, Scope, Closures, Higher-Order Functions 
+Scenario: Create reusable functions for event operations. 
+Objective: Encapsulate logic and use closures. 
+Task: 
+• Create addEvent(), registerUser(), filterEventsByCategory() 
+• Use closure to track total registrations for a category 
+• Pass callbacks to filter functions for dynamic search 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Functions Scope Closures</title>
+
+</head>
+
+<body>
+
+    <h1>Event Functions</h1>
+
+    <script>
+
+        function addEvent(name) {
+
+            console.log(
+                "Added : " + name
+            );
+
+        }
+
+        function registerUser(user) {
+
+            console.log(
+                user + " Registered"
+            );
+
+        }
+
+        function filterEventsByCategory(
+            category,
+            callback
+        ) {
+
+            callback(category);
+
+        }
+
+        function registrationCounter() {
+
+            let count = 0;
+
+            return function () {
+
+                count++;
+
+                return count;
+
+            };
+
+        }
+
+        let counter =
+            registrationCounter();
+
+        addEvent("Music Fest");
+
+        registerUser("Shafee");
+
+        filterEventsByCategory(
+            "Music",
+            function (category) {
+
+                console.log(category);
+
+            }
+        );
+
+        console.log(counter());
+
+    </script>
+
+</body>
+
+</html>

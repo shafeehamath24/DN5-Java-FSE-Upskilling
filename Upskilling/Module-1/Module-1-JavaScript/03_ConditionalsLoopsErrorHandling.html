@@ -1,0 +1,87 @@
+<!--
+3. Conditionals, Loops, and Error Handling 
+Scenario: Only show valid events and limit registrations. 
+Objective: Apply conditions and handle invalid data. 
+User Story: As a user, I want only upcoming events with seats to be displayed. 
+Task: 
+• Use if-else to hide past or full events 
+• Loop through the event list and display using forEach() 
+• Wrap registration logic in try-catch to handle errors 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Conditionals Loops Error Handling</title>
+
+</head>
+
+<body>
+
+    <h1>Upcoming Events</h1>
+
+    <ul id="events"></ul>
+
+    <script>
+
+        let events = [
+
+            {
+                name: "Music Fest",
+                seats: 10
+            },
+
+            {
+                name: "Dance Show",
+                seats: 0
+            }
+
+        ];
+
+        let output =
+            document.getElementById("events");
+
+        events.forEach(event => {
+
+            if (event.seats > 0) {
+
+                let li =
+                    document.createElement("li");
+
+                li.innerHTML =
+                    event.name;
+
+                output.appendChild(li);
+
+            }
+
+        });
+
+        try {
+
+            let seats = 0;
+
+            if (seats <= 0) {
+
+                throw
+                "No seats available";
+
+            }
+
+        }
+
+        catch (error) {
+
+            console.log(error);
+
+        }
+
+    </script>
+
+</body>
+
+</html>

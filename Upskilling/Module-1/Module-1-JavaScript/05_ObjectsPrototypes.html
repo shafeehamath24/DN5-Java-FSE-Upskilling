@@ -1,0 +1,63 @@
+<!--
+5. Objects and Prototypes 
+Scenario: Each event is an object with properties and methods. 
+Objective: Model real-world entities using objects. 
+Task: 
+• Define Event constructor or class 
+• Add checkAvailability() to prototype 
+• List object keys and values using Object.entries() 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Objects and Prototypes</title>
+
+</head>
+
+<body>
+
+    <h1>Event Objects</h1>
+
+    <script>
+
+        class Event {
+
+            constructor(name, seats) {
+
+                this.name = name;
+                this.seats = seats;
+
+            }
+        }
+
+        Event.prototype.checkAvailability =
+            function () {
+
+                return this.seats > 0;
+
+            };
+
+        let event1 =
+            new Event(
+                "Music Fest",
+                20
+            );
+
+        console.log(
+            event1.checkAvailability()
+        );
+
+        console.log(
+            Object.entries(event1)
+        );
+
+    </script>
+
+</body>
+
+</html>

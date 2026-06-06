@@ -1,0 +1,76 @@
+<!--
+8. Event Handling 
+Scenario: Add interactive elements like buttons and filters. 
+Objective: Respond to user actions. 
+Task: 
+• Use onclick for "Register" buttons 
+• Use onchange to filter events by category 
+• Use keydown to allow quick search by name
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Event Handling</title>
+
+</head>
+
+<body>
+
+    <h1>Event Handling</h1>
+
+    <select id="category">
+
+        <option>Music</option>
+
+        <option>Sports</option>
+
+    </select>
+
+    <input type="text" id="search" placeholder="Search">
+
+    <button onclick="register()">
+
+        Register
+
+    </button>
+
+    <script>
+
+        function register() {
+
+            alert(
+                "Registered Successfully"
+            );
+
+        }
+
+        document.getElementById(
+            "category"
+        ).onchange = function () {
+
+            console.log(
+                this.value
+            );
+
+        };
+
+        document.getElementById(
+            "search"
+        ).onkeydown = function () {
+
+            console.log(
+                "Searching..."
+            );
+
+        };
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+<!--
+2. Syntax, Data Types, and Operators 
+Scenario: Store event details like name, date, and available seats. 
+Objective: Use proper data types and operations. 
+Task: 
+• Use const for event name and date, let for seats 
+• Concatenate event info using template literals 
+• Use ++ or -- to manage seat count on registration 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Syntax Data Types Operators</title>
+
+</head>
+
+<body>
+
+    <h1>Event Details</h1>
+
+    <p id="info"></p>
+
+    <script>
+
+        const eventName =
+            "Music Festival";
+
+        const eventDate =
+            "15 July 2026";
+
+        let availableSeats = 50;
+
+        availableSeats--;
+
+        document.getElementById("info").innerHTML =
+
+            `Event :
+    ${eventName}<br>
+
+    Date :
+    ${eventDate}<br>
+
+    Seats Left :
+    ${availableSeats}`;
+
+    </script>
+
+</body>
+
+</html>

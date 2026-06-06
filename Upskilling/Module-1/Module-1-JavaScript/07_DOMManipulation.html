@@ -1,0 +1,53 @@
+<!--
+7. DOM Manipulation 
+Scenario: Display all events dynamically on the webpage. 
+Objective: Render events using JS. 
+Task: 
+• Access DOM elements using querySelector() 
+• Create and append event cards using createElement() 
+• Update UI when user registers or cancels 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>DOM Manipulation</title>
+
+</head>
+
+<body>
+
+    <h1>Community Events</h1>
+
+    <div id="container"></div>
+
+    <script>
+
+        let container =
+            document.querySelector(
+                "#container"
+            );
+
+        let card =
+            document.createElement("div");
+
+        card.innerHTML =
+            "Music Festival";
+
+        card.style.border =
+            "1px solid black";
+
+        card.style.padding =
+            "10px";
+
+        container.appendChild(card);
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,184 @@
+<!--
+11. Working with Forms 
+Scenario: Create a registration form for event sign-up. 
+Objective: Connect form inputs to JavaScript. 
+Task: 
+• Capture name, email, and selected event using form.elements 
+• Prevent default form behavior using event.preventDefault() 
+• Validate inputs and show errors inline
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width,
+                   initial-scale=1.0">
+
+    <title>Working with Forms</title>
+
+    <style>
+        body {
+
+            font-family: Arial;
+            background-color: #f5f5f5;
+            padding: 20px;
+
+        }
+
+        form {
+
+            width: 350px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+
+        }
+
+        input,
+        select {
+
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+
+        }
+
+        button {
+
+            background: blue;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+
+        }
+
+        .error {
+
+            color: red;
+            font-size: 14px;
+
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h1>
+
+        Event Registration Form
+
+    </h1>
+
+    <form id="registrationForm">
+
+        <input type="text" name="username" placeholder="Enter Name">
+
+        <input type="email" name="email" placeholder="Enter Email">
+
+        <select name="eventName">
+
+            <option value="">
+
+                Select Event
+
+            </option>
+
+            <option>
+
+                Music Festival
+
+            </option>
+
+            <option>
+
+                Sports Meet
+
+            </option>
+
+            <option>
+
+                Dance Show
+
+            </option>
+
+        </select>
+
+        <button type="submit">
+
+            Register
+
+        </button>
+
+        <p class="error" id="errorMessage">
+
+        </p>
+
+    </form>
+
+    <script>
+
+        document.getElementById(
+            "registrationForm"
+        )
+
+            .addEventListener(
+
+                "submit",
+
+                function (event) {
+
+                    event.preventDefault();
+
+                    let form =
+                        event.target;
+
+                    let username =
+                        form.elements.username.value;
+
+                    let email =
+                        form.elements.email.value;
+
+                    let eventName =
+                        form.elements.eventName.value;
+
+                    let error =
+                        document.getElementById(
+                            "errorMessage"
+                        );
+
+                    error.innerHTML = "";
+
+                    if (username === "" ||
+                        email === "" ||
+                        eventName === "") {
+
+                        error.innerHTML =
+
+                            "All fields are required";
+
+                    }
+
+                    else {
+
+                        alert(
+
+                            "Registration Successful"
+
+                        );
+
+                    }
+
+                }
+
+            );
+
+    </script>
+
+</body>
+
+</html>

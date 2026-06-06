@@ -1,0 +1,113 @@
+<!--
+14. jQuery and JS Frameworks 
+Scenario: Use jQuery to simplify DOM tasks. 
+Objective: Understand and use jQuery. 
+Task: 
+• Use $('#registerBtn').click(...) to handle click events 
+• Use .fadeIn() and .fadeOut() for event cards 
+• Mention one benefit of moving to frameworks like React or Vue
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width,
+                   initial-scale=1.0">
+
+    <title>jQuery and Frameworks</title>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js">
+
+    </script>
+
+    <style>
+        body {
+
+            font-family: Arial;
+            padding: 20px;
+
+        }
+
+        #eventCard {
+
+            width: 300px;
+            padding: 20px;
+            background: lightblue;
+            border: 1px solid black;
+            margin-top: 20px;
+
+        }
+
+        button {
+
+            padding: 10px 20px;
+            background: blue;
+            color: white;
+            border: none;
+
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h1>
+
+        jQuery Example
+
+    </h1>
+
+    <button id="registerBtn">
+
+        Register Event
+
+    </button>
+
+    <div id="eventCard">
+
+        Community Music Festival
+
+    </div>
+
+    <p>
+
+        React and Vue provide
+        component-based architecture,
+        reusable UI components,
+        and better scalability
+        for modern web applications.
+
+    </p>
+
+    <script>
+
+        $("#registerBtn").click(
+
+            function () {
+
+                $("#eventCard").fadeOut(
+
+                    1000,
+
+                    function () {
+
+                        $("#eventCard").fadeIn();
+
+                    }
+
+                );
+
+            }
+
+        );
+
+    </script>
+
+</body>
+
+</html>

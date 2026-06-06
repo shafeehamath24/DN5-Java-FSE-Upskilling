@@ -1,0 +1,73 @@
+<!--
+1. JavaScript Basics & Setup 
+Scenario: Set up your community portal to use JavaScript. 
+Objective: Configure environment and test basic script functionality. 
+Task: 
+• Use <script src="main.js"></script> in HTML 
+• Log "Welcome to the Community Portal" using console.log()
+• Use an alert to notify when the page is fully loaded 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width,
+                   initial-scale=1.0">
+
+    <title>JavaScript Basics</title>
+
+    <style>
+        body {
+
+            font-family: Arial;
+            background-color: #f4f4f4;
+            padding: 20px;
+
+        }
+
+        h1 {
+
+            color: darkblue;
+
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h1>
+
+        Community Event Portal
+
+    </h1>
+
+    <p>
+
+        Welcome to the JavaScript module.
+
+    </p>
+
+    <script>
+
+        console.log(
+            "Welcome to the Community Portal"
+        );
+
+        window.onload = function () {
+
+            alert(
+                "Page fully loaded"
+            );
+
+        };
+
+    </script>
+
+</body>
+
+</html>
